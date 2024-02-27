@@ -1,0 +1,8 @@
+bored
+excited
+exhausted
+frustrated
+happy
+neutral
+sad
+worried
