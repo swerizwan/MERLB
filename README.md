@@ -6,7 +6,6 @@ This project requires the use of Python 3.6.3; however, there is no confirmation
 pip install -r requirements.txt.
 
 # Dataset
-The dataset along with csv files for training and testing can be downloaded by the below link: https://drive.google.com/drive/folders/12G9reQKack1eTqRWOO39CZYiE_PP_FHB?usp=sharing
 
 # Steps in Implementation
 Follow the below steps to run the experiments:
