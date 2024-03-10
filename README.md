@@ -7,6 +7,12 @@ pip install -r requirements.txt.
 
 # Dataset
 
+LoLs dataset from twitch.tv
+The dataset along with csv files for training 5,513 clips and testing of 1,379 clips, total duration is 9.56 hours can be downloaded by the below link: https://drive.google.com/drive/folders/1IK5J6Yq701P0QzJjPANFXc8YmypO0TYe?usp=sharing
+
+FIFA dataset from twitch.tv
+The dataset along with csv files for training 8,606 clips and testing of 2,151 clips, total duration is 14.94 hours can be downloaded by the below link: https://drive.google.com/drive/folders/1wSSoz6uMeCtuaVweNIMv7U7uJM6fUiQO?usp=sharing
+
 # Steps in Implementation
 Follow the below steps to run the experiments:
 •	Run utils/processingdataset.py to start the process of converting the dataset into npy files.
