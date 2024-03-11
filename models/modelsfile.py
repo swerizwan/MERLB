@@ -13,6 +13,10 @@ import os
 from models.extern.MERLBLayersfile import MERLB_Layer
 import keras.activations
 from keras import regularizers
+import numpy as np
+from sklearn.cluster import KMeans
+from sklearn.metrics.pairwise import euclidean_distances
+from sklearn.metrics.pairwise import rbf_kernel
 
 os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/graphviz-2.38/release/bin/'
 
@@ -319,6 +323,45 @@ def merlb_fusion_model(time_steps, flag_model):
 	reshape_1 = Reshape((1, 129))(Concatenate()([bias, features_face]))
 	reshape_2 = Reshape((1, 129))(Concatenate()([bias, features_live_streaming]))
 	reshape_3 = Reshape((1, 129))(Concatenate()([bias, features_audio]))
+
+	model.add(Conv2D(32, (3, 3), padding='same', input_shape=input_shape))
+	model.add(Activation('relu'))
+	model.add(MaxPooling2D(pool_size=(2, 2)))
+	input_shape = (224, 224, 3)
+	num_classes = 7
+	# Sample data
+	data = np.array([[1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9],
+                 [10, 11, 12]])
+
+	# Number of clusters
+	num_clusters = 2
+
+	# Perform KMeans clustering
+	kmeans = KMeans(n_clusters=num_clusters, random_state=0)
+	cluster_labels = kmeans.fit_predict(data)
+	cluster_centers = kmeans.cluster_centers_
+
+	# Initialize key segments list
+	key_segments = []
+
+	# For each cluster
+	for i in range(num_clusters):
+		# Get indices of data points belonging to the current cluster
+		cluster_indices = np.where(cluster_labels == i)[0]
+    
+		# Calculate distances of data points within the cluster to the cluster's centroid
+		distances = euclidean_distances(data[cluster_indices], [cluster_centers[i]])
+    
+		# Find the index of the data point closest to the cluster's centroid
+		closest_index = cluster_indices[np.argmin(distances)]
+    
+		# Add the key segment (data point) to the list
+		key_segments.append(data[closest_index])
+
+	# Convert the list of key segments to a numpy array
+	key_segments = np.array(key_segments)
 
 	x = Dot(axes=1)([reshape_1, reshape_2])
 	x = Reshape((1, 129 * 129))(x)
