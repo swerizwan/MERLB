@@ -6,9 +6,27 @@
 
 In our experiment, we utilized a TWITCH.TV dataset featuring ten English-speaking live broadcasters, ensuring gender balance. The dataset, comprising 7200 video clips, underwent annotation for emotional impact and live broadcasting behaviors. Class imbalance was addressed through an oversampling strategy. The input data for each clip included visual and audio frames. Our MERLB model, alongside other fusion models, underwent evaluation using F1-score.
 
-# Experiment Requirements
+# MERLB Environment Setup
 
-This project requires Python 3.6.3. Compatibility with other versions is not confirmed. For a detailed list of requirements, refer to the `requirements.txt` file. Use the following command for easy installation:
+This document provides instructions for setting up a Conda environment named `merlb` with the required dependencies.
+
+## Prerequisites
+
+Ensure that you have [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) installed on your system.
+
+## Setting Up the Environment
+
+Follow these steps to create and activate the Conda environment with the specified packages:
+
+1. **Create a Conda Environment**
+
+   Open your terminal or command prompt and run the following command to create a Conda environment named `merlb`:
+
+   ```bash
+   conda create --name merlb python=3.6
+
+
+This project requires Python 3.6 Compatibility with other versions is not confirmed. For a detailed list of requirements, refer to the `requirements.txt` file. Use the following command for easy installation:
 
 ```
 pip install -r requirements.txt
