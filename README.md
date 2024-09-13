@@ -4,11 +4,19 @@
 
 # Overview
 
-In our experiment, we utilized a TWITCH.TV dataset featuring ten English-speaking live broadcasters, ensuring gender balance. The dataset, comprising 7200 video clips, underwent annotation for emotional impact and live broadcasting behaviors. Class imbalance was addressed through an oversampling strategy. The input data for each clip included visual and audio frames. Our MERLB model, alongside other fusion models, underwent evaluation using F1-score.
+This paper presents a Multimodal Emotion Recognition in Live Broadcasting (MERLB) system that addresses challenges in real-time emotion analysis across modalities like body language, vocal tone, and facial expressions. The system uses deep convolutional neural networks with inception modules and dense blocks for facial recognition and tensor train layers for multimodal data fusion. 
+
+# 👁️💬 Architecture
+
+The proposed methodology comprises Deep CNN for image feature extraction, key segment selection for speech feature extraction, processing sequential data using Bi-LSTM, and conducting emotion classification using dense layers.
+
+<img style="width: 80%; max-width: 100%;" src="swerizwan/resources/architecture.png" alt="DivAlign Overview">
 
 # MERLB Environment Setup
 
-This document provides instructions for setting up a Conda environment named `merlb` with the required dependencies.
+In our experiment, we utilized a TWITCH.TV dataset featuring ten English-speaking live broadcasters, ensuring gender balance. The dataset, comprising 7200 video clips, underwent annotation for emotional impact and live broadcasting behaviors. Class imbalance was addressed through an oversampling strategy. The input data for each clip included visual and audio frames. Our MERLB model, alongside other fusion models, underwent evaluation using F1-score.
+
+The instructions for setting up a Conda environment named `merlb` with the required dependencies:
 
 ## Prerequisites
 
