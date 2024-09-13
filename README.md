@@ -12,6 +12,8 @@ The proposed methodology comprises Deep CNN for image feature extraction, key se
 
 <img style="width: 80%; max-width: 100%;" src="/swerizwan/MERLB/tree/main/resources/architecture.png" alt="MERLB Overview">
 
+<img style="width: 80%; max-width: 100%;" src="/msohaildanish/DivAlign/raw/main/resources/architecture.png" alt="DivAlign Overview">
+
 # MERLB Environment Setup
 
 In our experiment, we utilized a TWITCH.TV dataset featuring ten English-speaking live broadcasters, ensuring gender balance. The dataset, comprising 7200 video clips, underwent annotation for emotional impact and live broadcasting behaviors. Class imbalance was addressed through an oversampling strategy. The input data for each clip included visual and audio frames. Our MERLB model, alongside other fusion models, underwent evaluation using F1-score.
