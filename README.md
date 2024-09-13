@@ -10,7 +10,7 @@ This paper presents a Multimodal Emotion Recognition in Live Broadcasting (MERLB
 
 The proposed methodology comprises Deep CNN for image feature extraction, key segment selection for speech feature extraction, processing sequential data using Bi-LSTM, and conducting emotion classification using dense layers.
 
-<img style="width: 80%; max-width: 100%;" src="https://github.com/swerizwan/MERLB/resources/architecture.png" alt="MERLB Overview">
+<img style="width: 80%; max-width: 100%;" src="https://github.com/swerizwan/MERLB/tree/main/resources/architecture.png" alt="MERLB Overview">
 
 # MERLB Environment Setup
 
