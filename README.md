@@ -40,6 +40,34 @@ This project requires Python 3.6 Compatibility with other versions is not confir
 pip install -r requirements.txt
 ```
 
+# Experimental Results
+
+The table below summarizes the experimental results of Early fusion, Late fusion, Joint fusion, Deep fusion, and MERLB, providing F1 scores for each label based on Multi-task learning and Single-task learning for different categories like Routing (Rou), Procurement (Pro), Respawning (Res), Exploring (Exp), Fighting (Fig), Punching (Pun), Defending (Def), Defeated (Dft), Negative Valence (VNeg), Neutral Valence (VNeut), Positive Valence (VPos), Low Arousal (ALow), Neutral Arousal (ANeut), and High Arousal (AHigh).
+
+| Dataset        | Model  | Task   | Rou   | Pro   | Res   | Exp   | Fig   | Pun   | Def   | Dft   | VNeg  | VNeut | VPos  | ALow  | ANeut | AHigh |
+|----------------|--------|--------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+| **FIFA Dataset** | Early  | Multi | 0.535 | 0.563 | 0.586 | 0.396 | 0.653 | 0.512 | 0.786 | 0.723 | 0.794 | 0.389 | 0.623 | 0.213 | 0.796 | **0.475** |
+|                |        | Single | 0.695 | 0.632 | 0.785 | 0.567 | 0.643 | **0.686** | 0.843 | 0.577 | 0.754 | 0.353 | 0.753 | 0.224 | 0.753 | 0.185 |
+|                | Late   | Multi  | 0.753 | 0.696 | 0.735 | 0.593 | 0.696 | 0.586 | 0.864 | 0.686 | 0.797 | 0.543 | **0.863** | 0.243 | 0.754 | 0.253 |
+|                |        | Single | 0.686 | 0.325 | 0.363 | 0.496 | 0.533 | 0.463 | 0.753 | 0.573 | 0.744 | 0.463 | 0.643 | 0.052 | 0.753 | 0.242 |
+|                | Joint  | Multi  | 0.643 | **0.764** | 0.753 | 0.643 | 0.754 | 0.654 | 0.664 | 0.684 | 0.754 | 0.242 | 0.643 | 0.123 | 0.785 | 0.135 |
+|                |        | Single | 0.613 | 0.643 | 0.744 | 0.632 | 0.612 | 0.533 | 0.675 | 0.721 | **0.823** | 0.354 | 0.753 | 0.213 | 0.812 | 0.124 |
+|                | Deep   | Multi  | **0.754** | 0.753 | 0.743 | 0.713 | 0.567 | 0.674 | 0.754 | **0.784** | 0.785 | 0.634 | 0.842 | **0.282** | 0.853 | 0.321 |
+|                |        | Single | 0.743 | 0.523 | 0.574 | **0.756** | 0.734 | 0.621 | 0.753 | 0.632 | 0.832 | 0.640 | 0.854 | 0.053 | 0.743 | 0.313 |
+|                | Our    | Multi  | 0.696 | 0.743 | **0.854** | 0.753 | **0.765** | 0.621 | **0.857** | 0.742 | 0.869 | 0.538 | **0.859** | 0.206 | **0.880** | 0.254 |
+|                |        | Single | 0.745 | 0.584 | 0.821 | 0.657 | 0.547 | 0.596 | **0.874** | 0.725 | 0.807 | **0.643** | 0.748 | 0.206 | 0.822 | 0.234 |
+
+| **LoLs Dataset** | Early  | Multi | 0.686 | 0.564 | 0.564 | 0.456 | 0.563 | 0.524 | 0.861 | 0.764 | 0.821 | 0.486 | 0.689 | 0.153 | 0.869 | **0.354** |
+|                |        | Single | 0.753 | 0.643 | 0.834 | 0.643 | 0.597 | **0.765** | 0.855 | 0.654 | 0.846 | 0.467 | 0.816 | 0.133 | 0.814 | 0.269 |
+|                | Late   | Multi  | **0.884** | 0.754 | 0.832 | 0.645 | 0.754 | 0.643 | 0.879 | 0.564 | 0.842 | 0.521 | **0.873** | 0.121 | 0.883 | 0.311 |
+|                |        | Single | 0.686 | 0.435 | 0.453 | 0.654 | 0.645 | 0.564 | 0.862 | 0.654 | 0.866 | 0.563 | 0.754 | 0.075 | 0.835 | 0.321 |
+|                | Joint  | Multi  | 0.723 | 0.578 | 0.671 | 0.543 | 0.676 | 0.672 | 0.767 | 0.798 | 0.875 | 0.367 | 0.764 | 0.203 | 0.853 | 0.321 |
+|                |        | Single | 0.645 | 0.753 | **0.877** | 0.785 | 0.631 | 0.653 | 0.795 | 0.785 | 0.851 | 0.474 | 0.821 | 0.212 | 0.821 | 0.264 |
+|                | Deep   | Multi  | 0.874 | **0.784** | 0.786 | 0.732 | 0.675 | 0.721 | **0.897** | 0.676 | **0.887** | 0.642 | 0.854 | **0.231** | 0.875 | 0.342 |
+|                |        | Single | 0.721 | 0.542 | 0.521 | 0.735 | 0.734 | 0.621 | 0.754 | 0.653 | 0.845 | 0.563 | 0.762 | 0.153 | 0.825 | 0.276 |
+
+> **Note:** For a detailed table with more statistical values and breakdowns, refer to the `results.pdf` file in the repository.
+
 # Dataset
 
 ## LoLs Dataset from Twitch.tv
