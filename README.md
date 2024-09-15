@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 # Experimental Results
 
-The table below summarizes the experimental results of Early fusion, Late fusion, Joint fusion, Deep fusion, and MERLB, providing F1 scores for each label based on Multi-task learning and Single-task learning for different categories like Routing (Rou), Procurement (Pro), Respawning (Res), Exploring (Exp), Fighting (Fig), Punching (Pun), Defending (Def), Defeated (Dft), Negative Valence (VNeg), Neutral Valence (VNeut), Positive Valence (VPos), Low Arousal (ALow), Neutral Arousal (ANeut), and High Arousal (AHigh).
+The following table presents the F1 scores for different models (Early, Late, Joint, Deep, and MERLB) across two datasets (FIFA and LoLs). The scores reflect performance in multi-task and single-task learning for various actions and emotions.
 
 | Dataset        | Model  | Task   | Rou   | Pro   | Res   | Exp   | Fig   | Pun   | Def   | Dft   | VNeg  | VNeut | VPos  | ALow  | ANeut | AHigh |
 |----------------|--------|--------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
@@ -65,8 +65,6 @@ The table below summarizes the experimental results of Early fusion, Late fusion
 |                |        | Single | 0.645 | 0.753 | **0.877** | 0.785 | 0.631 | 0.653 | 0.795 | 0.785 | 0.851 | 0.474 | 0.821 | 0.212 | 0.821 | 0.264 |
 |                | Deep   | Multi  | 0.874 | **0.784** | 0.786 | 0.732 | 0.675 | 0.721 | **0.897** | 0.676 | **0.887** | 0.642 | 0.854 | **0.231** | 0.875 | 0.342 |
 |                |        | Single | 0.721 | 0.542 | 0.521 | 0.735 | 0.734 | 0.621 | 0.754 | 0.653 | 0.845 | 0.563 | 0.762 | 0.153 | 0.825 | 0.276 |
-
-> **Note:** For a detailed table with more statistical values and breakdowns, refer to the `results.pdf` file in the repository.
 
 # Dataset
 
