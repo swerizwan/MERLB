@@ -7,6 +7,7 @@ from keras import initializers
 from keras import regularizers
 from keras import constraints
 
+
 def init_orthogonal_merlb_cores(list_shape_input, list_shape_output, list_ranks):
     """
     Initialize orthogonal tensor train (MERLB) cores.
