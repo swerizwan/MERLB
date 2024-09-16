@@ -17,7 +17,6 @@ import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import euclidean_distances
 from sklearn.metrics.pairwise import rbf_kernel
-
 os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/graphviz-2.38/release/bin/'
 
 def get_f1_score(y_true, y_pred): #taken from old keras source code
