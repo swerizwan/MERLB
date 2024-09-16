@@ -1,6 +1,5 @@
 from pandas import read_csv
 
-
 def calculate_weights_class(labels):
     """Computes class weight determinations for the following attributes: valence, arousal, 
     and live streaming weights, based on a Pandas data frame of labels.
