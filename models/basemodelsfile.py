@@ -2,7 +2,6 @@ from tensorflow.keras.layers import Input, Dense, Conv1D, Conv2D, MaxPooling1D, 
     BatchNormalization, Flatten, TimeDistributed, GlobalAveragePooling2D, Activation, Add, ZeroPadding2D
 from tensorflow.keras.models import Model
 
-
 def normalization_relu_add(x):
     """gives the input X a Batch Normalization and ReLU layer.
 
