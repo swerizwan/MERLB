@@ -9,7 +9,6 @@ import json
 from random import shuffle
 from pandas import read_csv
 
-
 def generated_value_face_loc(id_streamer):
 	"""Obtains the bounding box of the webcam for a specified streamer.
 	Input: Streamer's ID
