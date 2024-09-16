@@ -1,6 +1,5 @@
 from pandas import read_csv
 
-
 def get_l_rep_class(annotations):
 	"""Obtains the classes that appear the least and the most frequently across all labels.
 
