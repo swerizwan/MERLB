@@ -1,18 +1,3 @@
-"""
-$description Global live-streaming and video hosting social platform owned by Amazon.
-$url twitch.tv
-$type live, vod
-$webbrowser Required for getting a new :ref:`client-integrity token <cli/plugins/twitch:Client-integrity token>`.
-$metadata id
-$metadata author
-$metadata category
-$metadata title
-$notes See the :ref:`Authentication <cli/plugins/twitch:Authentication>` docs on how to prevent ads.
-$notes Read more about :ref:`embedded ads <cli/plugins/twitch:Embedded ads>` here.
-$notes :ref:`Low latency streaming <cli/plugins/twitch:Low latency streaming>` is supported.
-$notes Acquires a :ref:`client-integrity token <cli/plugins/twitch:Client-integrity token>` on streaming access token failure.
-"""
-
 import argparse
 import logging
 import math
