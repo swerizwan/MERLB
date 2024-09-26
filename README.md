@@ -14,7 +14,7 @@ The proposed methodology comprises Deep CNN for image feature extraction, key se
 
 # MERLB Environment Setup
 
-In our experiment, we utilized a TWITCH.TV dataset featuring ten English-speaking live broadcasters, ensuring gender balance. The dataset, comprising 7200 video clips, underwent annotation for emotional impact and live broadcasting behaviors. Class imbalance was addressed through an oversampling strategy. The input data for each clip included visual and audio frames. Our MERLB model, alongside other fusion models, underwent evaluation using F1-score.
+In our experiment, we utilized FIFA and LoLs datasets featuring English-speaking live broadcasters, ensuring gender balance. The dataset, comprising 7200 video clips, underwent annotation for emotional impact and live broadcasting behaviors. Class imbalance was addressed through an oversampling strategy. The input data for each clip included visual and audio frames. Our MERLB model, alongside other fusion models, underwent evaluation using F1-score.
 
 The instructions for setting up a Conda environment named `merlb` with the required dependencies:
 
